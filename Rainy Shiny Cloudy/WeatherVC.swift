@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import CoreLocation
 
 class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,17 +19,25 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var currentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+//    var currentWeather: CurrentWeather!
     var currentWeather = CurrentWeather()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.delegate = self
         tableView.dataSource = self
         
-        currentWeather.downloadWeatehrDetails {
-            //Setup UI to load data
+        currentWeather.downloadWeatherDetails {
+            self.updateMainUI()
         }
+        
+//        currentWeather = CurrentWeather()
+
+    
+        print(currentWeather.currentTemp)
         
     }
 
@@ -49,9 +59,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func updateMainUI() {
         dateLabel.text = currentWeather.date
-        currentTempLabel.text = currentWeather.currentTemp
+        currentTempLabel.text = "\(currentWeather.currentTemp)"
         currentWeatherTypeLabel.text = currentWeather.weatherType
-        
+        locationLabel.text = currentWeather.cityName
+        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
         
     }
         
