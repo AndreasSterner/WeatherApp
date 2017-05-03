@@ -19,8 +19,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var currentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-//    var currentWeather: CurrentWeather!
-    var currentWeather = CurrentWeather()
+//    var currentWeather = CurrentWeather()
+    
+    var currentWeather: CurrentWeather!
+    var forecast: Forecast!
 
 
     override func viewDidLoad() {
@@ -30,15 +32,23 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+        currentWeather = CurrentWeather()
+        forecast = Forecast()
+        
         currentWeather.downloadWeatherDetails {
             self.updateMainUI()
         }
-        
-//        currentWeather = CurrentWeather()
 
     
         print(currentWeather.currentTemp)
         
+    }
+    
+    func downloadForecastData(completed: DownloadComplete) {
+        //Downloading forecast data for table view
+        
+        let forecastURL = URL(string: FORECAST_WEATHER_URL)!
+        Alamofire.request(<#T##url: URLConvertible##URLConvertible#>)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
