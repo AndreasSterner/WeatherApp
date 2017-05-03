@@ -77,14 +77,26 @@ var currentTemp: String {
                     
                     if let currentTemperature = main["temp"] as? Double {
                         
-                        let kelvinToCelcius = "\(currentTemperature - 273.15) °C"
+                        let kelvinToCelcius = "\(currentTemperature - 273.15)"
                         
-                        self._currentTemp = kelvinToCelcius
+//                        if kelvinToCelcius.characters.count > 5 {
+//                        
+//                        let endIndex = kelvinToCelcius.index(kelvinToCelcius.endIndex, offsetBy: kelvinToCelcius.characters.count + 5)
+//                        var truncated = kelvinToCelcius.substring(to: endIndex)
+//
+//                        } else {
+//                            var truncated = kelvinToCelcius
+//
+//                        }
+//                        
+//                        self._currentTemp = "\(truncated) °C"
+                        
+                        self._currentTemp = "\(kelvinToCelcius) °C"
                         print(self._currentTemp)
                     }
                 }
                 completed()
-            } // </dict>
+            } 
         }
     
         
