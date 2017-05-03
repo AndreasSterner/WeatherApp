@@ -49,10 +49,10 @@
                                             <constraint firstAttribute="height" constant="120" id="XYG-80-CoC"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13.3 C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRC-GX-nap">
-                                        <rect key="frame" x="8" y="78" width="201" height="82"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13.30 C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRC-GX-nap">
+                                        <rect key="frame" x="8" y="78" width="228" height="82"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="201" id="5ns-oe-zh1"/>
+                                            <constraint firstAttribute="width" constant="228" id="5ns-oe-zh1"/>
                                             <constraint firstAttribute="height" constant="82" id="PHg-ix-o4B"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="55"/>
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="37.331334332833585"/>
+            <point key="canvasLocation" x="30.434782608695656" y="36.684782608695656"/>
         </scene>
     </scenes>
 </document>
