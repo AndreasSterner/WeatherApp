@@ -37,5 +37,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location in order for this application to work properly.</string>
 </dict>
 </plist>
