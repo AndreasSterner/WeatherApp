@@ -52,7 +52,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource,CL
         locationAuthStatus()
     }
     
-    
     func locationAuthStatus(){
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
@@ -134,33 +133,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource,CL
         currentTempLabel.text = "\(currentWeather.currentTemp)"
         currentWeatherTypeLabel.text = currentWeather.weatherType
         locationLabel.text = currentWeather.cityName
-        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
+        currentWeatherImage.image = UIImage(named: currentWeather.weatherType) 
+     
         
     }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -77,25 +77,11 @@ var currentTemp: String {
                     
                     if let currentTemperature = main["temp"] as? Double {
                         
-//                        let kelvinToCelcius = "\(currentTemperature - 273.15)"
-                        
-//                        if kelvinToCelcius.characters.count > 5 {
+//                        let kelvinToFarenheitPreDivision = (currentTemperature * (9/5) - 459.67)
 //                        
-//                        let endIndex = kelvinToCelcius.index(kelvinToCelcius.endIndex, offsetBy: kelvinToCelcius.characters.count + 5)
-//                        var truncated = kelvinToCelcius.substring(to: endIndex)
-//
-//                        } else {
-//                            var truncated = kelvinToCelcius
-//
-//                        }
-//                        
-//                        self._currentTemp = "\(truncated) °C"
+//                        let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
                         
-                        let kelvinToFarenheitPreDivision = (currentTemperature * (9/5) - 459.67)
-                        
-                        let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
-                        
-                        self._currentTemp = "\(kelvinToFarenheit) °F"
+                        self._currentTemp = "\(String(format: "%.0f", currentTemperature - 273.15)) °C"
                         print(self._currentTemp)
                     }
                 }
@@ -110,43 +96,3 @@ var currentTemp: String {
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
